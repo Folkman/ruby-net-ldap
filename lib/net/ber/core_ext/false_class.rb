@@ -5,6 +5,6 @@ module Net::BER::Extensions::FalseClass
   ##
   # Converts +false+ to the BER wireline representation of +false+.
   def to_ber
-    "\001\001\000"
+    "\x01\x01\x00".force_encoding('ASCII-8BIT')
   end
 end
